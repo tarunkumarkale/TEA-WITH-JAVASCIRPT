@@ -1,0 +1,2 @@
+//   👍 first 
+//          .txt   and   .js               me hai  kya software kese samch jata ki auger me .txt me console.log likhu   to work karega    actualy .txt ko read krta usme phele se condition di hai ki yeh vo file nahi jo muje chaiye
