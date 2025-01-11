@@ -229,3 +229,40 @@ const gameName=new String ('tarun')
 // [[PrimitiveValue]]
 // : 
 // "tarun"
+
+let strin='taurn'
+
+console.log(strin.charAt(0))// it tell zero pe konsa charater
+
+console.log(strin.indexOf('a'))
+console.log(strin.substring(0,2)) // here it is not start with - vlaue  and  2  end not work means   two is not avillable   output is  t a      not  r  
+
+console.log(strin.slice(0,3)) // smae it give out put tar not n     and also it take -ve vlaue 
+
+console.log(strin.slice(0,-1))  // taur
+
+let namee='kalejkldsjfkljsdaf'
+
+// Extract from the second-to-last character to the end:
+console.log(namee.slice(-2)); // "un"
+
+// Extract the last two characters:
+console.log(namee.slice(-2, namee.length)); // "un"
+
+
+// slice always start left to right if postive or negativer
+
+let spacestrin="   taurn    "
+
+console.log(spacestrin.trim()) // tarun
+console.log(spacestrin) //              tarun
+
+let url='https;// jdfskjklsdjfkljsdafj'
+
+console.log(url.replace('jdfskjklsdjfkljsdafj','taurn kale'))   //
+https;// taurn kale
+
+let elderbrother=
+
+
+console.log()

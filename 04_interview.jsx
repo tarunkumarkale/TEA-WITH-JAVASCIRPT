@@ -10,7 +10,10 @@
 // primitive
 // 7 type    -- string ,number,boolean,null(pura khali not garbage),undefind(varibale declare memorey space le liya but without memeory),symbol,Bigint
 
-// non-prmitive (refrence type)
+// prmitive vo hota hai ki vo datahot ahai ki data immutable means us particlure wapsas reupdate nahi kr paye in stack memeory me  jab tumhe laghata hai ki ki apan reupdate kevalurible wohi use krte hai tabhi stack uska new space banta memeory me
+
+
+// non-prmitive (refrence type(address)
 // array ,objects,functons
 
 ///   👿 imp very ki javascript dynamic or static hai 

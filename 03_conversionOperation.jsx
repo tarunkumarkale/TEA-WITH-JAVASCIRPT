@@ -2,7 +2,6 @@ let score ="33"
 
 console.log(typeof score)
 console.log(typeof(score))
-
 // both are same
 
 
@@ -32,7 +31,7 @@ console.log(newdatavalue) // null
 console.log(typeof newdatavalue) // object
 let SecondnewValue=Number(newdatavalue)
 console.log(typeof SecondnewValue) // number
-console.log(SecondnewValue) //0
+console.log(SecondnewValue) //0  ek esa object 
 
 
 const newInvestigatevalue=undefined
@@ -63,8 +62,8 @@ console.log(convert) //nan
 // when number coversion 
 // '33'=== covert to number it type show number and output aslo number consol.log
 // '33abc'===covert type show number not output show number  it show NaN
-//true  output == 1
-// false output ==0
+//true   output == 1 when you convert it into number
+// false output ==0 when you convert it into number
 
 
 // now convert to boolean  
@@ -121,6 +120,9 @@ console.log(1+2+"2")  // output of code 32
 // int x = 5;
 // int y = x++; // y = 5, then x becomes 6
 
+// x++ (Postfix): Use the original value, then increment.  
+// 
+++x (Prefix): Increment first, then use the updated value.
 
 // comparision 
 console.log(2>1)  //true

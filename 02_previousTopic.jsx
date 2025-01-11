@@ -17,3 +17,10 @@
 //non primitive
 // object
  console.log(typeof null) // it give object
+
+ 
+console.log(typeof null);
+const nullcheck=null;
+let third= Number (nullcheck)
+console.log(typeof third)
+console.log(third)   // it give output zero after conversion into number means real null empty khali hota but uske ek esa object jo khali puri tarah se na koi garbage value naa koi other stuff
