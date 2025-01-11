@@ -15,7 +15,7 @@ let account ;
 console.log(accountId);   //TypeError: Assignment to constant variable
 
 
-//  👿 tumhe broweser jake inscript ke jarurat nahi padegi agar tum yeh kariu to 
+//  👿 tumhe broweser jake insecpt ke jarurat nahi padegi agar tum yeh kariu to 
   //   node 01_basic_varibel.js terminal me likh dena
 
 // chalo abh sabke sath invetigate krt hai 

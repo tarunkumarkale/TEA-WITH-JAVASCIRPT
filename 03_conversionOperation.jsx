@@ -84,3 +84,65 @@ let numConvert=String(num)
 console.log(numConvert)
 let start=typeof numConvert
 console.log(start); //string
+
+
+
+// ==============  operation=============
+//2 +2  is exp for operation  means math perform called operation
+let value =3
+let negValue=-value
+console.log(negValue)  // obviiously -vlaue
+
+// this called operation  
+
+console.log(2+2)
+console.log(2/2)
+console.log(2**2)  // 2power 2
+console.log(2%2)
+
+let str1='hello'
+let str2=' tarun '
+let str3= str1+str2
+console.log(str3)
+
+console.log("1"+2) // output 12
+console.log(1+"2") // output 12
+console.log("1"+2+2) // output 122
+console.log(1+2+"2")  // output of code 32
+
+// code start to read from left to right  first if it see string  then convert to string all othervise number  then add
+
+// prefix
+
+// int x = 5;
+// int y = ++x; // x becomes 6, then y = 6
+
+//postfix
+// int x = 5;
+// int y = x++; // y = 5, then x becomes 6
+
+
+// comparision 
+console.log(2>1)  //true
+console.log(2>=1)//false
+console.log(2!=1)//false
+
+// when we get problem with camparison with datatype
+
+console.log("2">0)  // true 
+
+//  imp yeh hai ki jab app comparision check krte hai tabh  kossh yehi krni chaiye ki datatype must be equal
+
+console.log(null==0) // not true
+console.log(null >=0) // true
+console.log(null > 0)  // not true
+
+// yeh kya to javascript app esko unpredictable result me aate hai 
+
+console.log(undefined==0) // not true
+console.log(undefined >=0) // not true
+console.log(undefined < 0)  // true
+
+
+// ===
+  // check value with data type
