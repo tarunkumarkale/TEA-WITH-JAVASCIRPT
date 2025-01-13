@@ -59,7 +59,8 @@ console.log(bigbalance.toLocaleString('EN-IN'))// ENABLE INDIAN   10,00,000
 
 
 ///////////////////////////mATHS/////////////////////////////
-
+// math ki library by defualt aati hai 
+// jese c me and c++ alag math include krni padti hai  jese  studio.h  and  math.h   header file lena padtah  hai
 console.log(Math)  // math ek library hai  and ek object hai jiske under proprty aty hai
 console.log(Math.abs(-9)) // 9   only -ve value ko positive hai  not -vice versa
 console.log(Math.round(9.8987)) // 10   
