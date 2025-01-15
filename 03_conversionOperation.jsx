@@ -31,7 +31,7 @@ console.log(newdatavalue) // null
 console.log(typeof newdatavalue) // object
 let SecondnewValue=Number(newdatavalue)
 console.log(typeof SecondnewValue) // number
-console.log(SecondnewValue) //0  ek esa object 
+console.log(SecondnewValue) //0  ek esa object  object jo khli kese karuge check by convert into number
 
 
 const newInvestigatevalue=undefined
@@ -127,16 +127,24 @@ console.log(1+2+"2")  // output of code 32
 // comparision 
 console.log(2>1)  //true
 console.log(2>=1)//false
-console.log(2!=1)//false
+console.log(2!=1)//true
 
 // when we get problem with camparison with datatype
 
 console.log("2">0)  // true 
+console.log("2">=0)  // false
 
 //  imp yeh hai ki jab app comparision check krte hai tabh  kossh yehi krni chaiye ki datatype must be equal
 
-console.log(null==0) // not true
+console.log(null==0) // not true , true kab hoga  jab number me convert kiya jaega
+
+////////////////////////////////////////////////////////////////////////////  problem javascript  ki
 console.log(null >=0) // true
+const  check= Number (null)
+console.log(check >=0)  // true
+console.log(check)  //0
+//===========================================================================================
+
 console.log(null > 0)  // not true
 
 // yeh kya to javascript app esko unpredictable result me aate hai 
@@ -148,3 +156,26 @@ console.log(undefined < 0)  // true
 
 // ===
   // check value with data type
+
+
+
+
+  /// 👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿
+  //  non primitive type cant be convert it into primitive data type 
+  
+let obj={
+  "bgcolor":"red",
+  textcolor:"green"
+}
+console.log(typeof obj) // obj
+
+console.log(Number (obj))  // NAN
+
+////////////////////////////////////////////////////////////////////////////
+let FunCheck=()=>{
+  console.log('here  i am declaring the function ')
+}
+
+console.log(FunCheck)  //[Function: FunCheck]
+console.log(FunCheck()) //here  i am declaring the function
+
