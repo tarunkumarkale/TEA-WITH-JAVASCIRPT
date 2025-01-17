@@ -3,7 +3,7 @@ let name='tuarn '
 console.log(` hello ${name}`)
 
 const gameName=new String ('tarun')
-
+console.log(typeof gameName)  // object
 
 //  Simple bhaasha me:
 

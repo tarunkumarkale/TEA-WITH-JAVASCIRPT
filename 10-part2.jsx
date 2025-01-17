@@ -157,6 +157,7 @@ num3.map((ele, index) => console.log(`Index: ${index}, Value: ${ele}`));
 // let arr = [1, 2, 3, 4];
 // let sum = arr.reduce((acc, num) => acc + num, 0);
 // console.log(sum); // 10
+// accumulator
 // // Explanation: Sums up all elements of the array starting with an initial value of 0.
 // 13. join()
 // Purpose: Joins all elements of an array into a string.
