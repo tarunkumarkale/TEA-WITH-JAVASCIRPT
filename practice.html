@@ -3,36 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 20%;">
+        <input type="number" id="firstValue" placeholder="Enter your first value" style="margin: 2px;">
+        <input type="number" id="secondValue" placeholder="Enter your second value" style="margin: 2px;">
+        <button id="ADD" style="background-color: red; color: white; margin: 2px;">ADD</button>
+        <button id="Minus" style="background-color: green; color: white; margin: 2px;">MINUS</button>
+        <button id="Sub" style="background-color: blue; color: white; margin: 2px;">SUB</button>
+        <button id="Mult" style="background-color: slategrey; color: white; margin: 2px;">MULT</button>
+    </div>
+    <div style="display: flex; width: 30%; height: auto; background-color: rgb(190, 193, 196); margin-top: 10px; justify-content: center; align-items: center;">
+        <h1 id="result" style="color: red;"></h1>
+    </div>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            let changeType;
-            let count;
-            const fun = document.getElementById('hello');
+            let showResult = document.getElementById('result');
+            let add = document.getElementById('ADD');
+            let sub = document.getElementById('Sub');
+            let minus = document.getElementById('Minus');
+            let mult = document.getElementById('Mult');
 
-            fun.addEventListener('click', () => {
-                const heading = document.querySelector('h1'); // Get the <h1> element
-                let gethead = heading.textContent; // Get its text content
+            add.addEventListener("click", () => {
+                let firstValue = Number(document.getElementById('firstValue').value);
+                let secondValue = Number(document.getElementById('secondValue').value);
+                let result = firstValue + secondValue;
+                showResult.innerText = `Result: ${result}`;
+            });
 
-                console.log(typeof gethead); // Logs "string"
+            sub.addEventListener("click", () => {
+                let firstValue = Number(document.getElementById('firstValue').value);
+                let secondValue = Number(document.getElementById('secondValue').value);
+                let result = firstValue - secondValue;
+                showResult.innerText = `Result: ${result}`;
+            });
 
-                if (typeof gethead === "string") {
-                    changeType = Number(gethead); // Convert text to number
-                }
+            minus.addEventListener("click", () => {
+                let firstValue = Number(document.getElementById('firstValue').value);
+                let secondValue = Number(document.getElementById('secondValue').value);
+                let result = firstValue - secondValue; // Corrected logic
+                showResult.innerText = `Result: ${result}`;
+            });
 
-                console.log(typeof changeType); // Logs "number"
-                console.log(changeType); // Logs the current number
-
-                count = changeType + 1; // Increment the number
-                console.log(count); // Logs the incremented value
-
-                heading.textContent = count; // Update the <h1> content
+            mult.addEventListener("click", () => {
+                let firstValue = Number(document.getElementById('firstValue').value);
+                let secondValue = Number(document.getElementById('secondValue').value);
+                let result = firstValue * secondValue;
+                showResult.innerText = `Result: ${result}`;
             });
         });
     </script>
-</head>
-<body>
-    <h1>0</h1>
-    <button id="hello">Click</button>
 </body>
 </html>

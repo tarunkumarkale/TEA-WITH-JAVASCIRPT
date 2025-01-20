@@ -60,3 +60,19 @@ document.addEventListener('DOMContentLoaded', () => {
 </html>
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// console.log("tarun"-"kale")  // NaN
+
+// 
+// Naming Practice
+// var _myName = "vinod";    //  IT WORK
+// var 1myName = "thapa";      // NOT WORK
+// var _1my__Name = "bahadur";    // IT WORK
+// var $myName = "thapa technical";   //  WORK
+// var myNaem% = "thapa technical";     // NOT WORK  (IT USE SPECIAL CHARACTER)
+
+// console.log("tarun"-"kale")  // NaN
+console.log( NaN===NaN)  // false
+
+// let numconversion= Number("jdflsajfj")
+// let numconversion= praseInt("jdflsajfj")
+// let numconversion= +("jdflsajfj")
