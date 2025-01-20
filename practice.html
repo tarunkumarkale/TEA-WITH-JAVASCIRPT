@@ -1,29 +1,38 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title> hello taur </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let changeType;
+            let count;
+            const fun = document.getElementById('hello');
+
+            fun.addEventListener('click', () => {
+                const heading = document.querySelector('h1'); // Get the <h1> element
+                let gethead = heading.textContent; // Get its text content
+
+                console.log(typeof gethead); // Logs "string"
+
+                if (typeof gethead === "string") {
+                    changeType = Number(gethead); // Convert text to number
+                }
+
+                console.log(typeof changeType); // Logs "number"
+                console.log(changeType); // Logs the current number
+
+                count = changeType + 1; // Increment the number
+                console.log(count); // Logs the incremented value
+
+                heading.textContent = count; // Update the <h1> content
+            });
+        });
+    </script>
 </head>
 <body>
-    <h1>hello tuan </h1>
-    <button id="myButton" style="border: 2px solid red;">click</button>
-
-    <script>
-        // Function to change the text of the first <h1> element
-        const fun = () => {
-            const first = document.querySelector("h1");
-            first.innerHTML = 'halejdkjkajkdaj';
-        };
-
-        // Function to call fun after 3 seconds
-        const funn = () => {
-            const first = document.querySelector("h1");
-            first.innerHTML="...loading"
-
-            setTimeout(fun,3000)
-          
-        };
-
-        // Add event listener to the button
-        document.getElementById("myButton").addEventListener("click", funn);
-    </script>
+    <h1>0</h1>
+    <button id="hello">Click</button>
 </body>
 </html>
