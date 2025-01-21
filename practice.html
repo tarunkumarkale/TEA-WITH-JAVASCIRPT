@@ -3,56 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Simple Calculator</title>
 </head>
 <body>
-    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 20%;">
-        <input type="number" id="firstValue" placeholder="Enter your first value" style="margin: 2px;">
-        <input type="number" id="secondValue" placeholder="Enter your second value" style="margin: 2px;">
-        <button id="ADD" style="background-color: red; color: white; margin: 2px;">ADD</button>
-        <button id="Minus" style="background-color: green; color: white; margin: 2px;">MINUS</button>
-        <button id="Sub" style="background-color: blue; color: white; margin: 2px;">SUB</button>
-        <button id="Mult" style="background-color: slategrey; color: white; margin: 2px;">MULT</button>
-    </div>
-    <div style="display: flex; width: 30%; height: auto; background-color: rgb(190, 193, 196); margin-top: 10px; justify-content: center; align-items: center;">
-        <h1 id="result" style="color: red;"></h1>
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            let showResult = document.getElementById('result');
-            let add = document.getElementById('ADD');
-            let sub = document.getElementById('Sub');
-            let minus = document.getElementById('Minus');
-            let mult = document.getElementById('Mult');
 
-            add.addEventListener("click", () => {
-                let firstValue = Number(document.getElementById('firstValue').value);
-                let secondValue = Number(document.getElementById('secondValue').value);
-                let result = firstValue + secondValue;
-                showResult.innerText = `Result: ${result}`;
-            });
+<input type="text" style="background-color: red;" id="firstInp" placeholder="Enter first number">
+<input type="text" style="background-color: red;" id="secondInp" placeholder="Enter second number">
+<h1 id="result"></h1>
 
-            sub.addEventListener("click", () => {
-                let firstValue = Number(document.getElementById('firstValue').value);
-                let secondValue = Number(document.getElementById('secondValue').value);
-                let result = firstValue - secondValue;
-                showResult.innerText = `Result: ${result}`;
-            });
+<select id="operation">
+  <option value="">Math</option>
+    <option value="add">PLUS</option>
+    <option value="subtract">MINUS</option>
+</select>
 
-            minus.addEventListener("click", () => {
-                let firstValue = Number(document.getElementById('firstValue').value);
-                let secondValue = Number(document.getElementById('secondValue').value);
-                let result = firstValue - secondValue; // Corrected logic
-                showResult.innerText = `Result: ${result}`;
-            });
+<button id="reset">Reset</button>
 
-            mult.addEventListener("click", () => {
-                let firstValue = Number(document.getElementById('firstValue').value);
-                let secondValue = Number(document.getElementById('secondValue').value);
-                let result = firstValue * secondValue;
-                showResult.innerText = `Result: ${result}`;
-            });
-        });
-    </script>
+<script>
+    const operationSelect = document.getElementById('operation');
+    const firstInput = document.getElementById('firstInp');
+    const secondInput = document.getElementById('secondInp');
+    const resultDisplay = document.getElementById('result');
+    const resetButton = document.getElementById('reset');
+
+    // Function to perform calculation
+    const calculate = () => {
+        const firstValue = parseFloat(firstInput.value) || 0; // Convert to number, default to 0 if empty
+        const secondValue = parseFloat(secondInput.value) || 0;
+        let result;
+
+        if (operationSelect.value === 'add') {
+            result = firstValue + secondValue;
+        } else if (operationSelect.value === 'subtract') {
+            result = firstValue - secondValue;
+        }
+
+        resultDisplay.innerText = `Result: ${result}`;
+    };
+
+    // Add event listener for dropdown change
+    operationSelect.addEventListener('change', calculate);
+
+    // Add event listener for reset button
+    resetButton.addEventListener('click', () => {
+        firstInput.value = '';
+        secondInput.value = '';
+        resultDisplay.innerText = '';
+    });
+</script>
+
 </body>
 </html>
