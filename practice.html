@@ -3,54 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Calculator</title>
+    <title>Document</title>
 </head>
 <body>
 
-<input type="text" style="background-color: red;" id="firstInp" placeholder="Enter first number">
-<input type="text" style="background-color: red;" id="secondInp" placeholder="Enter second number">
-<h1 id="result"></h1>
+<h1>hello taurn kale</h1>
 
-<select id="operation">
-  <option value="">Math</option>
-    <option value="add">PLUS</option>
-    <option value="subtract">MINUS</option>
-</select>
+    <script>
+let get =document.querySelector('h1').textContent
+// console.log( typeof(get) );// string
+   var myAge = 26;
+ console.log(myAge);
+let first=String (myAge)
+console.log(typeof first)   
 
-<button id="reset">Reset</button>
+let fisrt= typeof get
+let con= Number(get)
+console.log(typeof con)
 
-<script>
-    const operationSelect = document.getElementById('operation');
-    const firstInput = document.getElementById('firstInp');
-    const secondInput = document.getElementById('secondInp');
-    const resultDisplay = document.getElementById('result');
-    const resetButton = document.getElementById('reset');
+let fun=false
 
-    // Function to perform calculation
-    const calculate = () => {
-        const firstValue = parseFloat(firstInput.value) || 0; // Convert to number, default to 0 if empty
-        const secondValue = parseFloat(secondInput.value) || 0;
-        let result;
+console.log(typeof fun)
+let c=Number(fun)
+console.log(c)
 
-        if (operationSelect.value === 'add') {
-            result = firstValue + secondValue;
-        } else if (operationSelect.value === 'subtract') {
-            result = firstValue - secondValue;
-        }
+console.log( "Java "+ "Script");  
 
-        resultDisplay.innerText = `Result: ${result}`;
-    };
 
-    // Add event listener for dropdown change
-    operationSelect.addEventListener('change', calculate);
 
-    // Add event listener for reset button
-    resetButton.addEventListener('click', () => {
-        firstInput.value = '';
-        secondInput.value = '';
-        resultDisplay.innerText = '';
-    });
-</script>
 
+    </script>
 </body>
 </html>
