@@ -4,48 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <div class=" max-w-[1290px]  grid grid-cols-2 mx-auto my-4 ">
-    <input type="text" id="firstinp" placeholder="...enteryour number" class="mx-3 ">
-    <input type="text" id="secondinp" placeholder="...enteryour second  number" class="mx-3">
-</div>
-    <div class="grid grid-cols-4 max-w-[1290px]  mx-auto">
-<button onclick="performADD()" class="bg-red-400 mx-3" > +</button>
-<button onclick="performSub() " class="bg-green-400 mx-3" >-</button>
-<button onclick="performDIVIDE()" class="bg-red-400 mx-3" >/</button>
-<button onclick="performMult()" class="bg-yellow-400 mx-3" >*</button>
-</div>
+    <div>
+        <button id="btn">Click</button>
+    </div>
+    <script>
+        const first = document.getElementById('btn');
+        let data = document.querySelector('div');
+        
+        const fun = () => {
+            // Create and style the h1 element
+            let content = document.createElement('h1');
+            content.style.color = 'red'; // Correct style property
+            content.textContent = 'Hello World';
+            data.appendChild(content);
 
-<div class="mt-9 max-w-[1320px] mx-auto">
-<h1 class="text-lg text-red-300" id="Result"></h1>
-</div>
+            // Create the Remove button
+            let Removebtn = document.createElement('button');
+            Removebtn.textContent = 'Remove';
+            data.appendChild(Removebtn);
 
+            // Add click event to the Remove button
+            Removebtn.addEventListener('click', () => {
+                content.remove(); // Remove the h1 element
+                Removebtn.remove(); // Remove the button itself
+            });
+        };
 
-<script>
-
-const MathFun=()=>{
-    const firstinp=document.getElementById('firstinp').value
-const secondinp=document.getElementById('secondinp').value
-const get=document.getElementById('Result')
-let finalResult;
-    const performADD=()=>{
-finalResult=firstinp+secondinp
-    }
-    const performSub=()=>{
-finalResult=firstinp-secondinp
-    }
-    const performMult=()=>{
-finalResult=firstinp*secondinp
-    }
-    const performDIVIDE=()=>{
-finalResult=firstinp/secondinp
-    }
-    get.innerText=finalResult
-}
-
-document.addEventListener("DOMContentLoaded",MathFun)
-</script>
+        first.addEventListener('click', fun);
+    </script>
 </body>
 </html>
