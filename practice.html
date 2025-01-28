@@ -4,35 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+<link rel="stylesheet" href="Style.css">
+
 </head>
 <body>
-    <div>
-        <button id="btn">Click</button>
-    </div>
+    
+    <button onclick="hello()">clickc</button>
     <script>
-        const first = document.getElementById('btn');
-        let data = document.querySelector('div');
+
+    
+      
+
+        // Appending HTML: Inside the hello function, you are trying to append an HTML string to the document.body using appendChild. However, appendChild expects a DOM  element as an argument(inner html ki baat kr raa hai), not an HTML string. To fix this, you need to create a new element using createElement and set its innerHTML property to the HTML string. Then you can append the new element to the document body. 
+    
         
-        const fun = () => {
-            // Create and style the h1 element
-            let content = document.createElement('h1');
-            content.style.color = 'red'; // Correct style property
-            content.textContent = 'Hello World';
-            data.appendChild(content);
+        // With these fixes, when you click the button, the hello function will be called. It will create a new div element with the HTML content stored in the taurn variable and append it to the document body. The console will also log the taurn string.
 
-            // Create the Remove button
-            let Removebtn = document.createElement('button');
-            Removebtn.textContent = 'Remove';
-            data.appendChild(Removebtn);
 
-            // Add click event to the Remove button
-            Removebtn.addEventListener('click', () => {
-                content.remove(); // Remove the h1 element
-                Removebtn.remove(); // Remove the button itself
-            });
-        };
 
-        first.addEventListener('click', fun);
+
+// means append child use krne se phele div bana hoga and inner html dallna haogaa tujpe depend krta hai ki location pe dalna hi
+ // ya normall inner html use kr   but inseradjactelemnt not use becouse insertAdjacentElement expects a DOM element as the second argument, not an HTML string. If you want to append the HTML string to the new element, you should use innerHTML instead.
+
+// Appending HTML: You are still trying to append the taurn HTML string directly to the document.body using appendChild. As mentioned before, you need to create a new element and set its innerHTML property to the HTML string to append it correctly.
+
+
+
+
+
+
+const hello = () => {
+            let taurn = `<h1>hello mister how are you? <a href="https://powerrangersfanon.fandom.com/f/p/4400000000000102912">Click here</a></h1>`;
+            
+            const newElement = document.createElement('div');
+            newElement.innerHTML = taurn;
+            
+            document.body.appendChild(newElement);
+            console.log(taurn);
+      }
+
+    
     </script>
+
+
 </body>
 </html>
